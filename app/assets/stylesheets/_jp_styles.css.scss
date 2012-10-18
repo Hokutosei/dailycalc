@@ -1,0 +1,32 @@
+/* VARIABLES */
+$main-border-color:#d6d6d6;
+
+/* LINKS VARIABLES */
+$link-color-hover: #91cef4;
+$link-color:#00acec;
+
+/* FONT COLORS */
+$blue-font-color:#00acec;
+
+
+
+/* MIXINS */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($distance, $spread, $opacity) {
+  /* BOX SHADOW */
+  -webkit-box-shadow: 0px $distance $spread rgba(50, 50, 50, $opacity);
+  -moz-box-shadow:    0px $distance $spread rgba(50, 50, 50, $opacity);
+  box-shadow:         0px $distance $spread rgba(50, 50, 50, $opacity);
+}
+
+@mixin box-shadow-rgb($distance, $spread, $r, $g, $b, $opacity) {
+/* BOX SHADOW */
+  -webkit-box-shadow: 0px $distance $spread rgba($r, $g, $b, $opacity);
+  -moz-box-shadow:    0px $distance $spread rgba($r, $g, $b, $opacity);
+  box-shadow:         0px $distance $spread rgba($r, $g, $b, $opacity);
+}

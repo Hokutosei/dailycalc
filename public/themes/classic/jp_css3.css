@@ -1,0 +1,16 @@
+/* MIXINS LOADED */
+
+/* ROUNDED CORNERS */
+@mixin top-rounded-corner($radius) {
+	-webkit-border-radius:$radius;
+	-moz-border-radius:$radius;
+	border-radius:$radius;
+}
+
+
+/* BOX SHADOWS */
+@mixin bottom-shadow {
+	-webkit-box-shadow: 0px 4px 13px rgba(50, 50, 50, 1);
+	-moz-box-shadow:    0px 3px 8px rgba(50, 50, 50, 1);
+	box-shadow:         0px 3px 8px rgba(50, 50, 50, 1);
+}

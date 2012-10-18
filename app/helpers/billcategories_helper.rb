@@ -1,0 +1,2 @@
+module BillcategoriesHelper
+end

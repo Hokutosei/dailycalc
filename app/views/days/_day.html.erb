@@ -1,0 +1,14 @@
+<% @month.days.each do |days| %>
+  <%# if days == @current_item %>
+    <%#= content_tag_for(:tr, days ) do |d| %>
+  <%# else %>
+    <%= content_tag_for(:tr, days, :class => ("current_item" if days == @current_item)) do |d| %>
+      <td><%= d.timein %></td>
+      <td><%= d.timeout %></td>
+      <td><%= d.dailyworkhours if d.dailyworkhours.present? %></td>
+      <td><%= d.totalamount if d.totalamount.present? %></td>
+      <td><%= link_to 'x', d, method: :delete, :remote => true %></td>
+    <% end %>
+  <%# end %>
+
+<% end %>

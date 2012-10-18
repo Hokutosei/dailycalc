@@ -1,0 +1,50 @@
+// Place all the styles related to the months controller here.
+// They will automatically be included in application.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "_jp_styles.css.scss";
+
+#tableWrapper {
+  width:100%;
+  margin:0% auto;
+
+  #dailyTableId {
+    width:100%;
+
+  }
+}
+
+.overview_daily {
+  width: 600px;
+}
+.table_data {
+  min-height: 450px;
+  margin-bottom: 10px;
+  #total_data_col {
+    padding: 0px;
+    margin: 0px;
+
+    .persistent_total_div {
+      position: fixed;
+      width: 220px;
+      height: 400px;
+      @include box-shadow-rgb(1px, 10px, 145, 206, 244, 0.35);
+      ul {
+        height: 400px;
+        list-style-type: none;
+        border: 1px solid $main-border-color;
+        @include border-radius(3px);
+        li {
+          min-height: 130px;
+          h5 {
+            border-bottom: 1px solid $main-border-color;
+          }
+
+          h2.total_cash_amount, h2.total_working_hours, h2.total_working_days {
+            color: $blue-font-color;
+          }
+
+        }
+      }
+    }
+  }
+}

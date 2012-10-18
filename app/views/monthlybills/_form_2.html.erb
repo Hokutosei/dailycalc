@@ -1,0 +1,24 @@
+<div class="field">
+  <%= f.label :title %><br />
+  <%= f.text_field :title %>
+</div>
+<div class="field">
+  <%= f.label :amount %><br />
+  <%= f.number_field :amount %>
+</div>
+<div class="field">
+  <%= f.label :duedate %><br />
+  <%= f.datetime_select :duedate %>
+</div>
+<div class="field">
+  <%= f.label :payment %><br />
+  <%= f.select :payment, options_for_select(paymentConfirmation, "confirmation") %>
+</div>
+<div class="field">
+  <%= f.label :location %><br />
+  <%= f.text_field :location %>
+</div>
+<div class="field">
+  <%= f.label :category %><br />
+  <%= f.select :category, options_from_collection_for_select(Billcategory.all, "id", "title") %>
+</div>

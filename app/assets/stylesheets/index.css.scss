@@ -1,0 +1,64 @@
+// Place all the styles related to the index controller here.
+// They will automatically be included in application.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "jp_styles.css.scss";
+
+#user_column {
+  width: 260px;
+  float: left;
+
+  #user_table {
+    ul#user_data_table {
+      width: 250px;
+      border: 1px solid $main-border-color;
+      padding: 0px 0px 5px 8px;
+      margin: 0px;
+      min-height: 200px;
+      @include border-radius(5px);
+
+      li {
+        table {
+          width: 95%;
+          tr {
+            width: 100%;
+            td.title {
+              width: 55%;
+            }
+            td.value {
+              width: 45%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#main_data {
+  width: 650px;
+  margin-left: 230px;
+}
+
+#monthlyBilltable {
+  width: 95%;
+  border: 1px solid $main-border-color;
+  padding: 5px;
+    tr {
+      td.title {
+        width: 150px;
+      }
+      td.amount {
+        width: 100px;
+      }
+      td.duedate {
+        width: 100px;
+      }
+      td.confirmation {
+        width: 100px;
+      }
+      td.viewmore {
+        width: 100px;
+      }
+    }
+}

@@ -1,0 +1,39 @@
+<h1>Listing monthlybills</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Amount</th>
+    <th>Duedate</th>
+    <th>User</th>
+    <th>Month</th>
+    <th>Year</th>
+    <th>Payment</th>
+    <th>Location</th>
+    <th>Category</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @monthlybills.each do |monthlybill| %>
+  <tr>
+    <td><%= monthlybill.title %></td>
+    <td><%= monthlybill.amount %></td>
+    <td><%= monthlybill.duedate %></td>
+    <td><%= monthlybill.user_id %></td>
+    <td><%= monthlybill.month_id %></td>
+    <td><%= monthlybill.year_id %></td>
+    <td><%= monthlybill.payment %></td>
+    <td><%= monthlybill.location %></td>
+    <td><%= monthlybill.category %></td>
+    <td><%= link_to 'Show', monthlybill %></td>
+    <td><%= link_to 'Edit', edit_monthlybill_path(monthlybill) %></td>
+    <td><%= link_to 'Destroy', monthlybill, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Monthlybill', new_monthlybill_path %>

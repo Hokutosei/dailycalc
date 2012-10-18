@@ -1,0 +1,33 @@
+
+<%= form_for(@month) do |f| %>
+  <% if @month.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@month.errors.count, "error") %> prohibited this month from being saved:</h2>
+
+      <ul>
+      <% @month.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :month %><br />
+    <%= f.text_field :month %>
+  </div>
+
+   <div class="field">
+     <%= f.label :year_id %>
+     <%= f.select 'year_id', options_from_collection_for_select(Year.all, 'id', 'year') %>
+
+   </div>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :size => "40x10" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

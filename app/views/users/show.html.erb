@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Username:</b>
+  <%= @user.username %>
+</p>
+
+<p>
+  <b>Perhour:</b>
+  <%= @user.perhour %>
+</p>
+
+<table id="yearTableId">
+  <thead>
+  <tr>
+    <td class="three centered">Year</td>
+    <td>Months</td>
+    <td>Earnings</td>
+  </tr>
+  </thead>
+  <tbody>
+  <% @user.years.each do |year| %>
+      <% if year.present? %>
+          <tr>
+            <td>
+              <%= link_to year do %>
+                <%= year.year %>
+              <% end %>
+            </td>
+            <td>
+              <%= year.months.count  %>
+            </td>
+            <td></td>
+          </tr>
+      <% end %>
+  <% end %>
+  </tbody>
+</table>
+
+<%= #noinspection RailsParamDefResolve
+    form_for [@user, @user.years.build] do |year| %>
+    <p>
+      <%= year.text_field :year %>
+      <%= year.submit 'Submit New Year' %>
+    </p>
+<% end %>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', root_path %>

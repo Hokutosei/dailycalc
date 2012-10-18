@@ -1,0 +1,29 @@
+<%= #noinspection RailsParamDefResolve
+    form_for [@month, Day.new], remote: true, :format => :js do |d| %>
+    <div class="row">
+      <div class="four  columns">
+        <div class="row collapse">
+          <div class="three mobile-one columns">
+            <span class="prefix">Timein:</span>
+          </div>
+          <div class="nine mobile-three columns">
+            <%= d.number_field :timein, :size => 20, :value => 9%>
+          </div>
+        </div>
+      </div>
+      <div class="four columns">
+        <div class="row collapse">
+          <div class="three mobile-one columns">
+            <span class="prefix">Timeout:</span>
+          </div>
+          <div class="nine mobile-three columns">
+            <%= d.number_field :timeout, :size => 20 %>
+          </div>
+        </div>
+      </div>
+      <div class="four columns">
+        <%= d.submit 'Submit'%>
+      </div>
+
+    </div>
+<% end %>

@@ -1,0 +1,54 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require foundation_and_overrides
+ *= require_tree .
+ */
+/*@import "foundation"; */
+@import "_jp_styles.css.scss";
+
+
+body, table, ul, li, tr, td, tbody, thead, tfoot, a, img {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#mainWrapper {
+    width:900px;
+    margin: 0% auto;
+    margin-bottom: 10px;
+}
+
+#mainWrapper #header {
+
+}
+
+#mainWrapper #main_body {
+    border: 1px solid #d6d6d6;
+    background-color: #fcfcfc;
+    padding: 10px;
+    /* BORDER RADIUS */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    @include box-shadow-rgb(1px, 10px, 145, 206, 244, 0.35);
+}
+
+.clearfloat {
+    clear: both;
+}
+br.clearfloat {
+	clear: both;
+}

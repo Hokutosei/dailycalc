@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+User: <%= @year.user.username %>
+
+<p>
+  <b>Year:</b>
+  <%= @year.year %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @year.description %>
+</p>
+
+<table class="responsive years_table">
+  <thead>
+    <tr>
+      <td>Month</td>
+      <td>Days</td>
+      <td>Earnings</td>
+      <td class="view_more">View more</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @months.each do |month| %>
+    <tr>
+      <td><%= month.month %></td>
+      <td><%= month.days.count %></td>
+      <td><%= number_to_currency(month.days.sum(:totalamount), :locale => :ja) %></td>
+      <td class="view_more two">
+        <%= link_to "View more", month, :class => "tiny radius button year_btn"%>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= form_for [@year, @year.months.build] do |month| %>
+    <div class="row">
+      <%= month.text_field :month, :class => "five columns" %>
+      <%= month.submit "Create Month", :class => "postfix button" %>
+    </div>
+<% end %>
+
+<%#= link_to 'New Month', new_month_path(:year => @year.year) %>
+
+<%= link_to 'Edit', edit_year_path(@year) %> |
+<%= link_to "Back to #{@year.user.username}", user_path(@year.user) %>

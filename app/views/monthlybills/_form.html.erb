@@ -1,0 +1,66 @@
+<%= form_for(@monthlybill) do |f| %>
+    <% if @monthlybill.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@monthlybill.errors.count, "error") %> prohibited this monthlybill from being saved:</h2>
+
+          <ul>
+          <% @monthlybill.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <fieldset class="monthly_bill_form">
+        <legend>Monthly bill</legend>
+        <div class="row items">
+          <div class="three columns">
+            <%= f.label :title %>
+          </div>
+          <div class="five columns pull-six">
+            <%= f.select :title, options_for_select(bill_category, "title") %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="three columns">
+            <%= f.label :amount %>
+          </div>
+          <div class="five columns pull-six">
+            <%= f.number_field :amount %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="three columns">
+            <%= f.label :duedate %>
+          </div>
+          <div class="three columns pull-eight">
+                <%= f.date_select :duedate %>
+          </div>
+        </div>
+        <div class="row">
+            <div class="three columns">
+               <%= f.label :payment %>
+            </div>
+            <div class="three columns pull-eight">
+                <%= f.select :payment, options_for_select(paymentConfirmation) %>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="five-up columns">
+                <%= f.label :repetition %> <%= f.number_field :repetition, :class => "repetition" %>
+            </div>
+        </div>
+      <div class="row">
+        <div class="three columns">
+          <%= f.submit %>
+        </div>
+      </div>
+
+    </fieldset>
+
+<% end %>
+
+

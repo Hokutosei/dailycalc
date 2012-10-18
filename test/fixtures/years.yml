@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: years
+#
+#  id          :integer          not null, primary key
+#  year        :string(255)
+#  description :text
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  user_id     :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  year: MyString
+  description: MyText
+
+two:
+  year: MyString
+  description: MyText

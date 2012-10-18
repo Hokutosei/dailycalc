@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @monthlybill.title %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @monthlybill.amount %>
+</p>
+
+<p>
+  <b>Duedate:</b>
+  <%= @monthlybill.duedate %>
+</p>
+
+
+<p>
+  <b>Payment:</b>
+  <%= @monthlybill.payment %>
+</p>
+
+<table>
+  <thead>
+  <tr>
+    <td>Id</td>
+    <td>Title</td>
+    <td>Amount</td>
+    <td>Delete</td>
+  </tr>
+  </thead>
+
+  <tbody class="this_bill_items">
+    <%= render 'bills/bills_to_monthlybill' %>
+  </tbody>
+</table>
+
+
+
+<%= render 'monthlybills/new_form_bill' %>
+
+<%= link_to 'Edit', edit_monthlybill_path(@monthlybill) %> |
+<%= link_to 'Back', root_path %>

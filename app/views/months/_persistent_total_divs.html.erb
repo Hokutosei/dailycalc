@@ -1,0 +1,24 @@
+<div class="persistent_total_div">
+  <ul class="text-center">
+    <li>
+      <h5>Total Amount</h5>
+      <h2 class="total_cash_amount">
+        <%= number_to_currency(@month.days.sum(:totalamount), :locale => :ja) %>
+      </h2>
+    </li>
+
+    <li>
+      <h5>Total Working Hours</h5>
+      <h2 class="total_working_hours">
+        <%= @month.days.sum(:dailyworkhours) %> <%= "hour".pluralize(2) %>
+      </h2>
+    </li>
+
+    <li>
+      <h5>Total Working Days</h5>
+      <h2 class="total_working_days">
+        <%= @month.days.count %> <%= "day".pluralize(2) %>
+      </h2>
+    </li>
+  </ul>
+</div>

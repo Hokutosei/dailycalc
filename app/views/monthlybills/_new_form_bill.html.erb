@@ -1,0 +1,27 @@
+<%= form_for [@monthlybill, Bill.new], remote: true, :format => :js do |f| %>
+    <fieldset class="monthlybill_bill_form">
+      <legend>New bill form</legend>
+      <div class="row">
+        <div class="twelve columns centered">
+          <div class="field three">
+            <%= f.label :title %><br />
+            <%= f.text_field :title %>
+          </div>
+          <div class="field three">
+            <%= f.label :amount %><br />
+            <%= f.number_field :amount %>
+          </div>
+          <div class="field three">
+            <%= f.label :confirmation %><br />
+            <%= f.text_field :confirmation %>
+          </div>
+
+          <div class="">
+            <%= f.submit "Submit", :class => "radius medium button" %>
+          </div>
+
+        </div>
+      </div>
+
+    </fieldset>
+<% end %>

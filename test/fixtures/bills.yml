@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: bills
+#
+#  id             :integer          not null, primary key
+#  title          :string(255)
+#  amount         :float(255)
+#  due_date       :datetime
+#  confirmation   :string(255)
+#  user_id        :integer
+#  month_id       :integer
+#  year_id        :integer
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  monthlybill_id :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  amount: MyString
+  due_date: 2012-10-11 20:21:35
+  confirmation: MyString
+  user_id: 1
+  month_id: 1
+  year_id: 1
+
+two:
+  title: MyString
+  amount: MyString
+  due_date: 2012-10-11 20:21:35
+  confirmation: MyString
+  user_id: 1
+  month_id: 1
+  year_id: 1

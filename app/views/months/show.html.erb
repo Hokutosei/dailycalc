@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User: <%= @month.year.user.username %></h1>
+
+Year: <%= @month.year.year %>
+
+<p>
+  <b>Month:</b>
+  <%= @month.month %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @month.description %>
+</p>
+
+    <div class="row table_data">
+  <div class="three columns" id="total_data_col">
+    <%= render 'persistent_total_divs' %>
+  </div>
+
+  <div class="nine columns text-center">
+    <div id="tableWrapper">
+      <table id="dailyTableId">
+        <thead>
+        <tr>
+          <td>TimeIn</td>
+          <td>TimeOut</td>
+          <td>DailyworkHours</td>
+          <td>Total Amount</td>
+          <td>Delete</td>
+        </tr>
+        </thead>
+
+        <tbody id="this_item">
+            <%= render 'days/day' %>
+        </tbody>
+        <tfoot class="tfooter">
+        <%#= render 'days/day_footer' %>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+  <br class="clearfloat" />
+</div>
+
+<div class="row">
+  <div class="twelve text-center">
+
+    <div class="twelve centered">
+      <%= render 'new_data_form' %>
+    </div>
+
+  </div>
+</div>
+
+
+<%#= render 'actions' %>

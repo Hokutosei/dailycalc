@@ -1,0 +1,19 @@
+// Place all the styles related to the monthlybills controller here.
+// They will automatically be included in application.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.monthly_bill_form {
+  width: 100%;
+  div {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+}
+
+ul.monthlybill_line_items {
+  list-style-type: none;
+}
+
+.monthlybill_bill_form {
+  width: 90%;
+  padding-bottom: 10px;
+}

@@ -1,0 +1,24 @@
+<h1>New monthlybill</h1>
+
+<%= render 'form' %>
+
+<div class="this_monthly_item">
+  <ul class="monthlybill_line_items">
+    <%= render 'test_loop', :object => @test %>
+  </ul>
+
+
+</div>
+
+
+<%= link_to 'Back', monthlybills_path %>
+
+<script type="text/javascript">
+  $(function(){
+      $.ajax({
+          url: '/monthlybills/new',
+          type: 'get',
+          dataType: 'script'
+      });
+  })
+</script>

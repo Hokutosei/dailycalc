@@ -1,0 +1,21 @@
+// Place all the styles related to the years controller here.
+// They will automatically be included in application.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.years_table {
+  width: 90%;
+  tr {
+    td {
+      width: 100px;
+    }
+    td.view_more {
+      width: 50px;
+    }
+  }
+}
+
+a.year_btn {
+  color: #fff;
+  &:hover {
+    color: #f0f0f0;
+  }
+}
