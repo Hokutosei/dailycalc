@@ -2,7 +2,7 @@ class CreateBills < ActiveRecord::Migration
   def change
     create_table :bills do |t|
       t.string :title
-      t.string :amount
+      t.float :amount
       t.timestamp :due_date
       t.string :confirmation
       t.integer :user_id
