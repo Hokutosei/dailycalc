@@ -1,12 +1,3 @@
-//$('.repetition').focusout(function(){
-//    alert("<%#=j "hello! #{User.find_by_id(1).username}" %>");
-//    var f = jQuery('.repetition').val();
-//    alert(f);
-
-
-//});
-//$('.this_monthly_item').html("<%#=j render("test_loop") %>").fadeIn()
-//$('#this_item').html("<%#=j render(@day)%>").fadeIn()
 $('.repetition').focusout(function() {
     var repetitionField = jQuery('.repetition').val();
     $.post("/new.js", {repetitionField: repetitionField});
