@@ -7,7 +7,7 @@ class ChangeDataTypeForBillAmount < ActiveRecord::Migration
 
   def down
     change_table :bills do |t|
-      t.change :amount, :float
+      t.change :amount, :integer
     end
 
   end
