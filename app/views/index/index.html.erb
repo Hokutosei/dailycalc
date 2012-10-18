@@ -1,33 +1,17 @@
 <div id="user_column">
     <div id="user_table">
       <ul id="user_data_table">
-        <% @users.each do |user| %>
+        <% if user_signed_in? %>
+            <%= render 'user_logged_in_info' %>
+        <% else %>
             <li>
-              <h5 class="text-center">
-                <%= link_to user do %>
-                    <%= user.username %> <%= link_to "#{redirectToMonth(user)}", month_path(getMonthId(user)) %>
-                <% end %>
-
-              </h5>
-              <table class="round">
-                <tr>
-                  <td class="title">Work Days</td>
-                  <td class="value"><%= currentMonthDayCount(user) %> <%= "days".pluralize(2) %></td>
-                </tr>
-                <tr>
-                  <td class="title">Work Hours</td>
-                  <td class="value"><%= totalDailyWorkHours(user, redirectToMonth(user)) %></td>
-                </tr>
-                <tr>
-                  <td class="title">Total Amount</td>
-                  <td class="value">
-                    <%= number_to_currency(totalAmount(user, redirectToMonth(user)), :locale => :ja) %>
-                  </td>
-                </tr>
-              </table>
+              <%= link_to 'Login', new_user_session_path %>
+            </li>
+            <li>
+              <%= link_to 'Register', new_user_registration_path %>
             </li>
         <% end %>
-       </ul>
+      </ul>
     </div>
 </div>
 

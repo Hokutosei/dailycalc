@@ -31,6 +31,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :perhour, :username
 
+  validate :email, :uniqueness => false
+
   has_many :years
   has_many :months
   has_many :days

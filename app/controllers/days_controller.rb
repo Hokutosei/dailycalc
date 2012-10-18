@@ -47,7 +47,7 @@ private
   def totalamount(timein, timeout, user)
     #TO BE RETRIEVE FROM THE DATABASE
     #perHour = 850
-    total = (timeout.to_i - timein.to_i - @@breaktime) * user.perhour
+    total = (timeout.to_i - timein.to_i - @@breaktime) * user.perhour.to_i
   end
 
 end
