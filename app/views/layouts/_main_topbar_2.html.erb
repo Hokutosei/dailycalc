@@ -7,6 +7,9 @@
       <li>
         <%= link_to current_user.username, user_path(current_user.id) if user_signed_in? %>
       </li>
+      <li>
+        <%= link_to "Home", root_path %>
+      </li>
       <li class="has-dropdown">
         <% if user_signed_in? %>
         <%= link_to "Account", "#" %>
