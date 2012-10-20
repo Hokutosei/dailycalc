@@ -16,4 +16,4 @@
 //= require foundation
 //= require foundation/app
 //= require_tree .
-$(document).foundationTopBar();
+//$(document).foundationTopBar();

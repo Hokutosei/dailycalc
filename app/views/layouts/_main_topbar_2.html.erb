@@ -1,5 +1,19 @@
 <nav class="top-bar">
   <ul>
-    <li class="name"><h1><%= link_to 'title', '#' %></h1></li>
+    <li class="name"><h1><%= link_to 'SeedCounter', root_path %></h1></li>
   </ul>
+  <section>
+    <ul class="right">
+      <li class="has-dropdown">
+        <%= link_to "Account", "#" %>
+        <ul class="dropdown">
+          <% if user_signed_in? %>
+            <li><%= link_to "Edit Account", edit_user_path(current_user.id) %></li>
+          <% else %>
+            <li></li>
+          <% end %>
+        </ul>
+      </li>
+    </ul>
+  </section>
 </nav>
