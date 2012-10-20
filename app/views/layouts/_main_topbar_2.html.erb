@@ -4,15 +4,31 @@
   </ul>
   <section>
     <ul class="right">
+      <li>
+        <%= link_to current_user.username, user_path(current_user.id) if user_signed_in? %>
+      </li>
       <li class="has-dropdown">
+        <% if user_signed_in? %>
         <%= link_to "Account", "#" %>
-        <ul class="dropdown">
-          <% if user_signed_in? %>
-            <li><%= link_to "Edit Account", edit_user_path(current_user.id) %></li>
-          <% else %>
-            <li></li>
-          <% end %>
-        </ul>
+            <ul class="dropdown">
+                <li>
+                  <%= link_to "Edit Account", edit_user_registration_path(current_user.id) %>
+                </li>
+                <li>
+                  <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+                </li>
+            </ul>
+        <% else %>
+        <%= link_to "Not logged in?", "#" %>
+            <ul class="dropdown text-center" style="width:153px">
+              <li>
+                <%= link_to "Login", new_user_session_path %>
+              </li>
+              <li>
+                <%= link_to "Register", new_user_registration_path %>
+              </li>
+            </ul>
+        <% end %>
       </li>
     </ul>
   </section>
