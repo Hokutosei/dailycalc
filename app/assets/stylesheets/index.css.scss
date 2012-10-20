@@ -8,29 +8,23 @@
   float: left;
 
   #user_table {
-    ul#user_data_table {
+    #user_data_table {
       width: 250px;
       border: 1px solid $main-border-color;
-      padding: 0px 0px 5px 8px;
+      padding: 0px 0px 5px 4px;
       margin: 0px;
       min-height: 200px;
       @include border-radius(5px);
 
-      li {
-        table {
-          width: 95%;
-          tr {
-            width: 100%;
-            td.title {
-              width: 55%;
-            }
-            td.value {
-              width: 45%;
-            }
-          }
-        }
-      }
     }
+    .user_data1 {
+      border: 1px solid $main-border-color;
+      width:240px;
+      padding: 0px;
+
+      @include border-radius(3px);
+    }
+
   }
 }
 

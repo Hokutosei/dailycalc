@@ -27,9 +27,11 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  attr_accessor :login
+
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
-  attr_accessible :perhour, :username
+  attr_accessible :perhour, :username, :login
 
   validate :email, :uniqueness => false
 

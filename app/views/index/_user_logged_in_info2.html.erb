@@ -1,0 +1,6 @@
+<h6>Account Overview: <%= link_to current_user.username, user_path(current_user.id) %></h6>
+<h6>Current Month: <%= link_to userCurrentMonth, month_path(getMonthId) if current_user.months.present?%></h6>
+
+<%= render 'user_data_2' %>
+
+<%= link_to 'Logout', destroy_user_session_path, :method => :delete %>

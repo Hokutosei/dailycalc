@@ -1,7 +1,8 @@
 class IndexController < ApplicationController
   def index
     @time = Time.new
-    @users = User.all(params[:id])
+    @users = User.all
+    @user = User.find(current_user.id) if current_user
     @monthlyBills = Monthlybill.all
    # @currentMonthBills = @monthlyBills.find_by_duedate(:)
 

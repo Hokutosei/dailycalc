@@ -1,0 +1,23 @@
+<div class="user_data1">
+  <div class="row user_line_item">
+    <div class="two columns">
+      Total Cash
+    </div>
+    <div class="two columns">
+      <%= number_to_currency(totalAmount(current_user, userCurrentMonth), :locale => :ja) %>
+    </div>
+    <div class="end"></div>
+  </div>
+  <div class="row user_line_item">
+      <div class="two columns">
+        Worked <%= pluralizeDay %>
+      </div>
+      <div class="two columns">
+        <%= currentMonthDayCount %>
+      </div>
+
+      <div class="end"></div>
+  </div>
+
+
+</div>
