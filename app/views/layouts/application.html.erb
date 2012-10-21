@@ -13,11 +13,16 @@
 
   <%#= render 'devise' %>
     <div id="header">
-      <%= link_to root_path do %>
-          <h1>
-            Data Sheets
-          </h1>
-       <% end %>
+      <% if !user_signed_in? %>
+        <p class="header-context text-center">
+          A Personal Daily accountant that
+          <br />
+          <span style="color: #de8d59;">records, </span>
+          <span style="color: #00acec;"> calculate,</span> and
+          <span style="color: #b1d29d;"> chart</span>
+          your daily income from your work.
+        </p>
+      <% end %>
     </div>
 
     <div id="main_body">

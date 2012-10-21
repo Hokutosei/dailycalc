@@ -1,0 +1,47 @@
+<div id="user_column">
+  <div id="user_table">
+    <ul id="user_data_table">
+      <% if user_signed_in? %>
+          <%= render 'user_logged_in_info2' %>
+      <% else %>
+          <li>
+            <%= link_to 'Login', new_user_session_path %>
+          </li>
+          <li>
+            <%= link_to 'Register', new_user_registration_path %>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<div id="main_data">
+  <table id="monthlyBilltable">
+    <thead>
+    <tr>
+      <td class="title">Title</td>
+      <td class="amount">Amount</td>
+      <td class="duedate">Due Date</td>
+      <td class="confirmation">Confirmation</td>
+      <td class="viewmore">More..</td>
+    </tr>
+    </thead>
+    <tbody>
+    <% @monthlyBills.each do |monthlyBill| %>
+        <% if monthlyBill.duedate.strftime("%B-%y").downcase == currentYearAndMonth %>
+            <tr>
+              <td><%= monthlyBill.title %></td>
+              <td><%= number_to_currency(monthlyBill.amount, :locale => :ja) %></td>
+              <td><%= monthlyBill.duedate.strftime("%b-%d-%y") %></td>
+              <td><%= monthlyBill.payment %></td>
+              <td><%#= link_to "->", monthlyBill %></td>
+            </tr>
+        <% end %>
+    <% end %>
+    </tbody>
+
+  </table>
+  <%= link_to "New monthly bill", new_monthlybill_path %>
+</div>
+
+<br class="clearfloat" />
