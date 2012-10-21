@@ -21,4 +21,10 @@ module ApplicationHelper
     time.strftime("%B-%y").downcase
   end
 
+  def pageIsRegistrationOrSession
+    if params[:controller] == 'devise/registrations' || params[:controller] == 'devise/sessions' || user_signed_in?
+      return true
+    end
+  end
+
 end

@@ -1,0 +1,29 @@
+<% @users.each do |user| %>
+    <li>
+      <h5 class="text-center">
+        <%= link_to user do %>
+            <%= user.username %> <%= link_to "#{redirectToMonth(user)}", month_path(getMonthId(user))if user.months.present? %>
+        <% end %>
+
+      </h5>
+      <table class="round">
+        <tr>
+          <td class="title">Work Days</td>
+          <td class="value"><%= currentMonthDayCount(user) if user.months.present? %> <%#= "days".pluralize(2) %></td>
+        </tr>
+        <tr>
+          <td class="title">Work Hours</td>
+          <td class="value"><%= totalDailyWorkHours(user, redirectToMonth(user))  if user.months.present?%></td>
+        </tr>
+        <tr>
+          <td class="title">Total Amount</td>
+          <td class="value">
+            <%= number_to_currency(totalAmount(user, redirectToMonth(user)), :locale => :ja)  if user.months.present? %>
+          </td>
+        </tr>
+      </table>
+      <%= link_to 'Logout', destroy_user_session_path, :method => :delete %> |
+      <%= link_to 'Edit', edit_user_registration_path %> | <%= current_user.username %>
+
+    </li>
+<% end %>

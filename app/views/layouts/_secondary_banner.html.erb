@@ -1,3 +1,18 @@
 <div class="secondary_banner">
-  test
+  <div class="row secondary_banner_content">
+    <div class="seven columns content_left">
+        <%= render 'layouts/content_left' %>
+        <% if !pageIsRegistrationOrSession %>
+            <div class="row">
+              <div class="seven columns">
+                <%= link_to "Try Out now! ->", new_user_registration_path,:class => 'try_out_now' %>
+              </div>
+            </div>
+        <% end %>
+    </div>
+    <div class="four columns">
+
+    </div>
+    <div class="end"></div>
+  </div>
 </div>
