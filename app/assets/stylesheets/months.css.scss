@@ -22,9 +22,15 @@
   #total_data_col {
     padding: 0px;
     margin: 0px;
+    min-height: 500px;
 
     .persistent_total_div {
+      /*
       position: fixed;
+      */
+      position: absolute;
+      top: 0;
+      margin-top: 10px;
       width: 220px;
       height: 400px;
       @include box-shadow-rgb(1px, 10px, 145, 206, 244, 0.35);
@@ -44,6 +50,10 @@
           }
 
         }
+      }
+      .fixed {
+        position: fixed;
+        top: 0;
       }
     }
   }

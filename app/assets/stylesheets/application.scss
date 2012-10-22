@@ -61,7 +61,7 @@ ul {
 }
 
 #mainWrapper {
-    width:900px;
+    width:950px;
     margin: 0% auto;
     margin-bottom: 10px;
 }
@@ -83,17 +83,47 @@ ul {
     border: 1px solid #d6d6d6;
     background-color: #fcfcfc;
     padding: 10px;
+    min-height: 600px;
     /* BORDER RADIUS */
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     @include box-shadow-rgb(1px, 10px, 145, 206, 244, 0.35);
+    @include box-shadow-whihte-thick;
 }
 
-.clearfloat {
-    clear: both;
-}
+
 br.clearfloat {
 	clear: both;
+}
+
+.wood_background {
+  background: url(image_path("wood1.gif")) repeat;
+}
+
+
+.form_body1 {
+  background: #fffaf6;
+  border: 1px solid #fff;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  padding-bottom: 20px;
+  border-radius: 4px;
+  @include box-shadow-whihte-thick;
+
+  input[type=text], input[type=password], input[type=username], input[type=email] {
+    border: 3px solid #ebe6e2;
+    border-radius: 4px;
+    &:hover {
+      border-color: #CCC;
+    }
+  }
+
+  h2.title_h2 {
+    font-family: "Life Savers";
+  }
 }
 
