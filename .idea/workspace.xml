@@ -5,7 +5,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/index/_test_nav_bar.html.erb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/index/_user_data_1.html.erb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/index/_user_logged_in_info.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
     </list>
     <ignored path="dailycalc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="2" selection-start="646" selection-end="646" vertical-scroll-proportion="0.26408452">
+            <state line="12" column="21" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,10 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0">
+            <state line="13" column="147" selection-start="257" selection-end="257" vertical-scroll-proportion="0.10211267">
               <folding />
             </state>
           </provider>
@@ -1125,16 +1124,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0">
+        <state line="12" column="21" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="2" selection-start="646" selection-end="646" vertical-scroll-proportion="0.26408452">
+        <state line="13" column="147" selection-start="257" selection-end="257" vertical-scroll-proportion="0.10211267">
           <folding />
         </state>
       </provider>
