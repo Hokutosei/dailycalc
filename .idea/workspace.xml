@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbdd2839-84ff-48b3-9039-bf9ed7b3e7ba" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/jquery-ui-1.9.0.custom.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/index/_test_nav_bar.html.erb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/index/_user_data_1.html.erb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/index/_user_logged_in_info.html.erb" afterPath="" />
@@ -1043,13 +1044,6 @@
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/monthlybills.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="115" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jquery-ui-1.9.0.custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="277" column="141" selection-start="21058" selection-end="21058" vertical-scroll-proportion="-14.466666">
           <folding />
         </state>
       </provider>
