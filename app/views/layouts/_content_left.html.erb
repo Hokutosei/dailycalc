@@ -1,3 +1,19 @@
-Wouldn't be nice, <br />
-if you could track your <br />
-Daily Income and Budget?
+<% if determineWhatPage("index") %>
+    Wouldn't be nice, <br />
+    if you could track your <br />
+    Daily Income and Budget?
+<% elsif determineWhatPage("registrations") %>
+    <div class="registration_content">
+      By Registering, <br />
+      You can view your daily income<br />
+      in a perspective view. <br />
+      In just a few clicks!
+    </div>
+<% elsif determineWhatPage("sessions")%>
+    <div class="session_new_content">
+      Start updating those <br />
+      Daily time in and outs <br />
+      Quickly!
+    </div>
+
+<% end %>

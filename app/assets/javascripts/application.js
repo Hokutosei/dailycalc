@@ -12,8 +12,13 @@
 //
 //= require jquery
 //= require jquery-ui
+//= require jquery.ui.all
 //= require jquery_ujs
 //= require foundation
 //= require foundation/app
 //= require_tree .
 //$(document).foundationTopBar();
+
+//$(document).ready(function() {
+//    $('.user_registration_button').button();
+//});

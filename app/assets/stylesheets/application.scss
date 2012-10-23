@@ -9,6 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ * require jquery-ui-1.9.0.custom
+ *= require jquery.ui.all
  *= require foundation_and_overrides
  *= require_tree .
  */
@@ -33,13 +35,14 @@ ul {
 /* SECONDARY BANNER */
 .secondary_banner {
   width: 100%;
-  min-height: 250px;
+  min-height: 450px;
   background: url(image_path("1.jpg")) repeat;
   padding-top: 15px;
+  margin: 0 auto;
   margin-bottom: 15px;
   @include box-shadow(3px, 6px, 0.95);
   .secondary_banner_content {
-    width: 50%;
+    width: 73%;
     margin: 0 auto;
     color: #ffffff;
     .content_left {
@@ -48,6 +51,14 @@ ul {
       font-style: bold;
       text-align: left;
       line-height: 50px;
+      .registration_content {
+        color: #99c89d;
+        font-size: 40px;
+      }
+      .session_new_content {
+        font-size: 40px;
+        color: #e0957a;
+      }
       a.try_out_now {
         font-size: 20px;
         text-align: center;
@@ -83,6 +94,7 @@ ul {
     border: 1px solid #d6d6d6;
     background-color: #fcfcfc;
     padding: 10px;
+    width: 950px;
     min-height: 600px;
     /* BORDER RADIUS */
     -webkit-border-radius: 5px;
@@ -90,6 +102,10 @@ ul {
     border-radius: 5px;
     @include box-shadow-rgb(1px, 10px, 145, 206, 244, 0.35);
     @include box-shadow-whihte-thick;
+    position: relative;
+    top: -200px;
+
+    z-index: 10;
 }
 
 
@@ -126,4 +142,6 @@ br.clearfloat {
     font-family: "Life Savers";
   }
 }
+
+
 

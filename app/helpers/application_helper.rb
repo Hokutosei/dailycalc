@@ -27,4 +27,8 @@ module ApplicationHelper
     end
   end
 
+  def determineWhatPage(page)
+    params[:controller] == "devise/#{page}" || params[:controller] == "index"
+  end
+
 end
