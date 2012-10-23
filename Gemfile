@@ -28,7 +28,6 @@ group :assets do
   gem 'compass-rails', '~> 1.0.3'
   gem 'zurb-foundation', '~> 3.1.1'
 
-  gem 'jquery-ui-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -37,6 +36,8 @@ group :assets do
 end
 
 gem 'jquery-rails', '~> 2.1'
+gem 'jquery-ui-rails'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
