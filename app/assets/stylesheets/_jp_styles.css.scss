@@ -66,3 +66,38 @@ $welcome_note_li: #fcfcfc;
   background: -ms-linear-gradient(92deg, rgb(235, 235, 235) 0%, rgb(97, 189, 240) 89%);
   background: linear-gradient(92deg, rgb(235, 235, 235) 0%, rgb(97, 189, 240) 89%);
 }
+
+
+/* ADVANCED BOX SHADOW */
+@mixin advance_box_shadow {
+  &:before, &:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 30px;
+    left: 17px;
+    width: 80%;
+    top: 60%;
+    min-width:300px;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);
+    -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+  }
+
+  &:after {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    right: 17px;
+    left: auto;
+  }
+
+}

@@ -121,39 +121,20 @@ ul.welcome_note_items {
   margin: 0;
   padding: 0;
 
-  li {
+  li.item_1 {
     background: $welcome_note_li;
-    @include border-radius(4px);
     padding: 7px;
-    &:before, &:after {
-      z-index: -1;
-      position: absolute;
-      content: "";
-      bottom: 10px;
-      left: 10px;
-      width: 80%;
-      top: 80%;
-      width:300px;
-      background: rgba(0, 0, 0, 0.7);
-      -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);
-      -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.7);
-      -webkit-transform: rotate(-3deg);
-      -moz-transform: rotate(-3deg);
-      -o-transform: rotate(-3deg);
-      -ms-transform: rotate(-3deg);
-      transform: rotate(-3deg);
-    }
+    margin-bottom: 20px;
+    @include border-radius(4px);
+    @include advance_box_shadow;
+  }
 
-    &:after {
-      -webkit-transform: rotate(3deg);
-      -moz-transform: rotate(3deg);
-      -o-transform: rotate(3deg);
-      -ms-transform: rotate(3deg);
-      transform: rotate(3deg);
-      right: 10px;
-      left: auto;
-    }
+  li.item_2 {
+    background: $welcome_note_li;
+    padding: 7px;
+    margin-bottom: 20px;
+    @include border-radius(4px);
 
   }
+
 }
