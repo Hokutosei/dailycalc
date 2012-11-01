@@ -18,10 +18,13 @@
 @import "_jp_styles.css.scss";
 @import "jp_fonts.css.scss";
 
-/* font import from google */
-@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
-@import url(http://fonts.googleapis.com/css?family=Raleway+Dots);
 
+
+@import "compass";
+
+body {
+  @include gradient_bg_white2;
+}
 
 body, table, ul, li, tr, td, tbody, thead, tfoot, a, img {
     margin: 0;
@@ -36,7 +39,7 @@ ul {
 .secondary_banner {
   width: 100%;
   min-height: 450px;
-  background: url(image_path("1.jpg")) repeat;
+  background: $secondary_banner_header repeat;
   padding-top: 15px;
   margin: 0 auto;
   margin-bottom: 15px;
@@ -101,7 +104,7 @@ ul {
     -moz-border-radius: 5px;
     border-radius: 5px;
     @include box-shadow-rgb(1px, 10px, 145, 206, 244, 0.35);
-    @include box-shadow-whihte-thick;
+    @include box-shadow-white-thick2;
     position: relative;
     top: -200px;
 
@@ -114,7 +117,7 @@ br.clearfloat {
 }
 
 .wood_background {
-  background: url(image_path("wood1.gif")) repeat;
+  background: $wood_background repeat;
 }
 
 

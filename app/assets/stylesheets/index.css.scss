@@ -2,27 +2,40 @@
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "jp_styles.css.scss";
+@import "compass";
+
 
 #user_column {
   width: 260px;
   float: left;
 
+
   #user_table {
     #user_data_table {
+      @include gradient_bg_white2;
       width: 250px;
       border: 1px solid $main-border-color;
-      padding: 0px 0px 5px 4px;
+      padding: 0px 0px 5px 0px;
       margin: 0px;
       min-height: 200px;
       @include border-radius(5px);
 
+
+      ul.index_user_panel {
+        width: 100%;
+        li.this_panel_item {
+          border-top: 1px solid rgba(0, 0, 0, 0.2);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          padding: 0 10px 0 10px;
+        }
+        li:first-child{border-top: none;}
+        li:last-child{border-bottom: none;}
+      }
+
     }
     .user_data1 {
-      border: 1px solid $main-border-color;
       width:240px;
       padding: 0px;
-
-      @include border-radius(3px);
     }
 
   }
@@ -136,5 +149,16 @@ ul.welcome_note_items {
     @include border-radius(4px);
 
   }
+}
+
+/* USER LOGGED IN STYLE */
+.user_panel, .user_panel_data {
+  min-height: 400px;
+  border: 1px solid $main-border-color;
+
+  @include gradient_bg_white2;
+  @include border-radius(4px);
+  @include box-shadow-2(3px, 6px, 0.5);
 
 }
+

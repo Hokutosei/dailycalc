@@ -28,7 +28,15 @@ module ApplicationHelper
   end
 
   def determineWhatPage(page)
-    params[:controller] == "devise/#{page}" || params[:controller] == "index"
+    #params[:controller] == "devise/#{page}" || params[:controller] == "index"
+    case params[:controller]
+      when "devise/#{page}"
+        return true
+      when "index"
+        return true
+      when "user#index"
+        true
+    end
   end
 
 end

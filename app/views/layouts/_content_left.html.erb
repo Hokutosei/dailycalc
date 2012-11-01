@@ -1,7 +1,15 @@
+
 <% if determineWhatPage("index") %>
-    Wouldn't be nice, <br />
-    if you could track your <br />
-    Daily Income and Budget?
+    <% if !user_signed_in? %>
+        Wouldn't be nice, <br />
+        if you could track your <br />
+        Daily Income and Budget?
+    <% else %>
+        you are signed in <%= current_user.username %> <%= current_user.id %>
+        <% if current_user.years.empty? || current_user.months.empty? %>
+            You currently have no year or month registered
+        <% end %>
+    <% end %>
 <% elsif determineWhatPage("registrations") %>
     <div class="registration_content">
       By Registering, <br />
@@ -15,5 +23,7 @@
       Daily time in and outs <br />
       Quickly!
     </div>
+<% elsif determineWhatPage("users#index") %>
+    test
 
 <% end %>

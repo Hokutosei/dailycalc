@@ -17,6 +17,12 @@ $note_header_bg_colors: #fff;
 $welcome_note_li: #fcfcfc;
 
 
+/* SECONDARY BACKGROUND */
+$secondary_banner_header:url(image_path("1.jpg"));
+
+/*WOOD BACKGROUND */
+$wood_background:url(image_path("wood1.gif"));
+
 /* MIXINS */
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -38,7 +44,21 @@ $welcome_note_li: #fcfcfc;
   box-shadow:         0px $distance $spread rgba($r, $g, $b, $opacity);
 }
 
+@mixin box-shadow-2($distance, $spread, $blur) {
+  -moz-box-shadow: 1px $distance $spread rgba(50, 50, 50, $blur);
+  -webkit-box-shadow: 1px 3px 8px #000000;
+  box-shadow: 1px $distance $spread rgba(50, 50, 50, $blur);
+}
+
 @mixin box-shadow-whihte-thick {
+  box-shadow:
+    0 2px 2px rgba(0,0,0,0.2),
+    0 1px 5px rgba(0,0,0,0.2),
+    0 0 0 12px rgba(186,239,255,0.5);
+  /*     0 0 0 12px rgba(255, 255, 255, 0.4); */
+
+}
+@mixin box-shadow-white-thick2 {
   box-shadow:
     0 2px 2px rgba(0,0,0,0.2),
     0 1px 5px rgba(0,0,0,0.2),
@@ -67,6 +87,28 @@ $welcome_note_li: #fcfcfc;
   background: linear-gradient(92deg, rgb(235, 235, 235) 0%, rgb(97, 189, 240) 89%);
 }
 
+@mixin gradient_background_grey {
+// needs latest Compass, add '@import "compass"' to your scss
+  background-color: #eeeeee; // Old browsers
+  @include filter-gradient(#eeeeee, #cccccc, vertical); // IE6-9
+  @include background-image(linear-gradient(top, #eeeeee 0%,#cccccc 100%));
+}
+
+@mixin gradient_bg_white {
+// needs latest Compass, add '@import "compass"' to your scss
+  background-color: rgb(238,238,238); // Old browsers
+  @include filter-gradient(#eeeeee, #eeeeee, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%));
+
+}
+
+@mixin gradient_bg_white2 {
+// needs latest Compass, add '@import "compass"' to your scss
+  background-color: rgb(255,255,255); // Old browsers
+  @include filter-gradient(#ffffff, #e5e5e5, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%));
+
+}
 
 /* ADVANCED BOX SHADOW */
 @mixin advance_box_shadow {
