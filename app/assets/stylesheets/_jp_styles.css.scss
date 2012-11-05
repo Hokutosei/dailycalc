@@ -110,6 +110,14 @@ $wood_background:url(image_path("wood1.gif"));
 
 }
 
+@mixin gradient_bg_white_3d {
+// needs latest Compass, add '@import "compass"' to your scss
+  background-color: rgb(255,255,255); // Old browsers
+  @include filter-gradient(#ffffff, #e5e5e5, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%)) ;
+
+}
+
 /* ADVANCED BOX SHADOW */
 @mixin advance_box_shadow {
   &:before, &:after {

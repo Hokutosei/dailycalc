@@ -22,3 +22,7 @@
 //$(document).ready(function() {
 //    $('.user_registration_button').button();
 //});
+
+$(document).ready(function(){
+    $('body').addClass('body_background');
+});
